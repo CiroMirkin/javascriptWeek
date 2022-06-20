@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28 - Video Speed Controller</title>
+
+    <style>
+        body {
+            background: darkslategrey;
+            background-size: cover;
+            font-family: sans-serif;
+            margin: 0;
+            display: grid;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        video {
+            box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.1);
+            width: 40%;
+            justify-self: center;
+        }
+
+        .speed {
+            background: #efefef;
+            border-radius: 50px;
+            box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin: .5rem;
+            overflow: hidden;
+        }
+
+        .speed-bar {
+            width: 28%;
+            background: linear-gradient(-170deg, #2376ae 0%, #c16ecf 100%);
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+            color: white;
+            height: 16%;
+            padding: .3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <video src="video.mp4" id="video" loop controls></video>
+    <footer class="speed" id="speed">
+        <div class="speed-bar">28%</div>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

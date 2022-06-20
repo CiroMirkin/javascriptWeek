@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 - Sticky Nav</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+            background: #eeeeee;
+            font-family: 'helvetica neue';
+            font-size: 20px;
+            font-weight: 200;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        .site-wrap {
+            max-width: 700px;
+            margin: 70px auto;
+            background: white;
+            padding: 40px;
+            text-align: justify;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+            transform: scale(0.98);
+            transition: transform 0.5s;
+        }
+
+        body.fixed-nav .site-wrap {
+            transform: scale(1);
+        }
+
+        header {
+            text-align: center;
+            height: 50vh;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            color: white;
+            font-size: 7vw;
+            text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            background: black;
+            top: 0;
+            width: 100%;
+            transition: all 0.5s;
+            position: relative;
+            z-index: 1;
+        }
+
+        body.fixed-nav nav {
+            position: fixed;
+            box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        nav li {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        li.logo {
+            max-width: 0;
+            overflow: hidden;
+            background: white;
+            transition: all .5s;
+            font-weight: 600;
+            font-size: 30px;
+        }
+
+        li.logo a {
+            color: black;
+        }
+
+        .fixed-nav li.logo {
+            max-width: 500px;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: .5em;
+            display: inline-block;
+            color: white;
+            transition: all 0.2s;
+            text-transform: uppercase;
+        }
+        nav li:hover, nav a:hover {
+            background-color: whitesmoke;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1>A story about getting lost.</h1>
+    </header>
+
+    <nav id="nav">
+        <ul>
+            <li class="logo"><a href="#">LOST.</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Images</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Maps</a></li>
+        </ul>
+    </nav>
+    <div class="site-wrap">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati blanditiis cum mollitia aliquid nihil at
+            necessitatibus explicabo, maiores atque doloremque ducimus, odit quos ab debitis nostrum non beatae aut.
+            Aperiam, debitis. Exercitationem quasi voluptas hic in veniam reiciendis repellat iusto! Alias saepe nihil
+            numquam magni, natus aperiam assumenda excepturi autem molestiae recusandae est obcaecati nemo, cupiditate
+            incidunt? Quam, blanditiis repudiandae ducimus, quisquam veritatis illo voluptatem, unde facilis amet
+            reprehenderit modi. Natus eligendi dolorum, voluptates dolore quae porro veniam, pariatur, cum non
+            recusandae iste nobis illum blanditiis accusamus consequuntur fuga accusantium inventore delectus! Quas
+            labore possimus iusto nihil odio, atque obcaecati.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati blanditiis cum mollitia aliquid nihil at
+            necessitatibus explicabo, maiores atque doloremque ducimus, odit quos ab debitis nostrum non beatae aut.
+            Aperiam, debitis. Exercitationem quasi voluptas hic in veniam reiciendis repellat iusto! Alias saepe nihil
+            numquam magni, natus aperiam assumenda excepturi autem molestiae recusandae est obcaecati nemo, cupiditate
+            incidunt? Quam, blanditiis repudiandae ducimus, quisquam veritatis illo voluptatem, unde facilis amet
+            reprehenderit modi. Natus eligendi dolorum, voluptates dolore quae porro veniam, pariatur, cum non
+            recusandae iste nobis illum blanditiis accusamus consequuntur fuga accusantium inventore delectus! Quas
+            labore possimus iusto nihil odio, atque obcaecati.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati blanditiis cum mollitia aliquid nihil at
+            necessitatibus explicabo, maiores atque doloremque ducimus, odit quos ab debitis nostrum non beatae aut.
+            Aperiam, debitis. Exercitationem quasi voluptas hic in veniam reiciendis repellat iusto! Alias saepe nihil
+            numquam magni, natus aperiam assumenda excepturi autem molestiae recusandae est obcaecati nemo, cupiditate
+            incidunt? Quam, blanditiis repudiandae ducimus, quisquam veritatis illo voluptatem, unde facilis amet
+            reprehenderit modi. Natus eligendi dolorum, voluptates dolore quae porro veniam, pariatur, cum non
+            recusandae iste nobis illum blanditiis accusamus consequuntur fuga accusantium inventore delectus! Quas
+            labore possimus iusto nihil odio, atque obcaecati.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati blanditiis cum mollitia aliquid nihil at
+            necessitatibus explicabo, maiores atque doloremque ducimus, odit quos ab debitis nostrum non beatae aut.
+            Aperiam, debitis. Exercitationem quasi voluptas hic in veniam reiciendis repellat iusto! Alias saepe nihil
+            numquam magni, natus aperiam assumenda excepturi autem molestiae recusandae est obcaecati nemo, cupiditate
+            incidunt? Quam, blanditiis repudiandae ducimus, quisquam veritatis illo voluptatem, unde facilis amet
+            reprehenderit modi. Natus eligendi dolorum, voluptates dolore quae porro veniam, pariatur, cum non
+            recusandae iste nobis illum blanditiis accusamus consequuntur fuga accusantium inventore delectus! Quas
+            labore possimus iusto nihil odio, atque obcaecati.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati blanditiis cum mollitia aliquid nihil at
+            necessitatibus explicabo, maiores atque doloremque ducimus, odit quos ab debitis nostrum non beatae aut.
+            Aperiam, debitis. Exercitationem quasi voluptas hic in veniam reiciendis repellat iusto! Alias saepe nihil
+            numquam magni, natus aperiam assumenda excepturi autem molestiae recusandae est obcaecati nemo, cupiditate
+            incidunt? Quam, blanditiis repudiandae ducimus, quisquam veritatis illo voluptatem, unde facilis amet
+            reprehenderit modi. Natus eligendi dolorum, voluptates dolore quae porro veniam, pariatur, cum non
+            recusandae iste nobis illum blanditiis accusamus consequuntur fuga accusantium inventore delectus! Quas
+            labore possimus iusto nihil odio, atque obcaecati.
+        </p>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

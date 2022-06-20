@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 - Hold Shift and Check Checkboxes</title>
+
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        body{
+            display: grid;
+        }
+        .list{
+            background: #a2b2ee;
+            border-radius: 5px;
+            box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+            justify-self: center;
+            margin-top: 10vh;
+            padding: .5rem;
+        }
+        .item{
+            list-style: none;
+            border-bottom: #5f7adb .2px solid;
+            padding: .7rem .4rem;
+        }
+        .item:last-child{
+            border: none;
+        }
+        .item > *{
+            display: inline-block;
+        } 
+        .item-text{
+            font-size: 1.2em;
+            margin: 0 .5rem;
+        }
+        .line-through{
+            /* background: #7787c2; */
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+        <ul class="list" id="list">
+            <li class="item" id="item">
+                <input type="checkbox" id="checkbox">
+                <div class="item-text" id="item-text">Create a new app.</div>
+            </li>
+            <li class="item" id="item">
+                <input type="checkbox" id="checkbox">
+                <div class="item-text" id="item-text">Create a new proyect.</div>
+            </li>
+            </li>
+            <li class="item" id="item">
+                <input type="checkbox" id="checkbox">
+                <div class="item-text" id="item-text">Drink some coffe.</div>
+            </li>
+            </li>
+            <li class="item" id="item">
+                <input type="checkbox" id="checkbox">
+                <div class="item-text" id="item-text">Change the phone.</div>
+            </li>
+        </ul>
+
+        <script src="./main.js"></script>
+</body>
+</html>
